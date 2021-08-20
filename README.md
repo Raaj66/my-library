@@ -128,15 +128,15 @@ export default App;
 
 I've found that it's helpful to export SASS variables to projects consuming the library. As such, I've added the `rollup-plugin-copy` NPM package and used it to copy the `typography.scss` and `variables.scss` into the `build` directory as part of the Rollup bundle process. This allows you to use these variables in your projects consuming the component library.
 
-For example, let's say you installed `harvey-component-library` into your project. To use the exported variables/mixins, in a SASS file you would do the following:
+For example, let's say you installed `react-component-library` into your project. To use the exported variables/mixins, in a SASS file you would do the following:
 
 ```Sass
-@import '~harvey-component-library/build/typography';
+@import '~react-component-library/build/typography';
 
 .example-container {
     @include heading;
 
-    color: $harvey-white;
+    color: $icn-white;
 }
 ```
 
