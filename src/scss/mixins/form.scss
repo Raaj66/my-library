@@ -1,0 +1,40 @@
+// Full - 380px
+// Medium-Full - 262px (e.g. SSN/TIN)
+// Medium - 186px (e.g. zip code)
+// Small - 80px (e.g. Years of Experience dropdown)
+// X-small - 65px (e.g. input with % sign)
+@mixin field-wrap($value: size) {
+
+  @if ($value == full_fluid) {
+
+    width: 100%;
+
+  } @else if $value == full {
+
+    width: 450px;
+
+  } @else if $value == full_380{
+
+    width: 380px;
+
+  } @else if $value == md{
+
+    width: 91%;
+
+  } @else if $value == sm{
+
+    width: 48.333333%;
+
+  } @else if $value == xs{
+
+    width: 25%;
+
+  }
+}
+
+@mixin right-placeholder($right) {
+  position: absolute;
+  right: $right;
+  color: $gray-light;
+  font-size: 10px;
+}

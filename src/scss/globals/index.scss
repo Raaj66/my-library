@@ -1,0 +1,7 @@
+@import "~scss/globals/headers";
+@import "~scss/mixins/font";
+@import "~scss/variables/color";
+
+.bold {
+  @include primary-font-demibold;
+}

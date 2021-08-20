@@ -1,0 +1,128 @@
+// * = very few instances of this color used throughout React codebase
+
+// gray-scale
+$brand-gray: #a2baca;
+$brand-gray-lite: #d6e1e8;
+$black: #000000;
+$white: #ffffff;
+$gray-primary: #2e4250;
+$link-disabled: #dce1e4;
+$dc_grey_active: #dde5ea; // *
+$gray-light: #738794;
+$gray-light-1: #708794;
+$gray-extra-lite: #a7b4bc;
+$gray-hover: #8d9da7;
+$grey-read-only: #F2F6F8;
+$grey-scroller: #bccdd9;
+$grey-track: #eaf1f6;
+// NOTE: above is currently called 'gray-hover' in style guide but isn't being used for hovers
+// exclusively.  Consider changing the name.
+$odd-gray-background: #edf4f7;
+$even-gray-background: #f7fbfc;
+$gray-1: #edf0f1; // *
+$gray-2: #cad2d7;
+$gray-3: #f5f8fa;
+$gray-4: #6b879a;
+$gray-5: #EEEEEE;
+$gray-6: #989A9C;
+$gray-7: #bdc3c7;
+$gray-8: #dce9ef;
+$gray-9: #F5F8F9;
+
+// reds
+$error-main: #cc2718;
+$warning-2: #db675d; // *
+$warning-3: #d15d0c;
+$warning-4: #d97a38;
+$warning-5: #eb6609;
+$ce-status-red: #b10000;
+$color-badge-fail: #880d0d;
+$recon-grid-red: #d0021b;
+$incomplete-status: #be550b;
+$bootstrap-error: #721c24;
+$bootstrap-error-bg: #f8d7da;
+$bootstrap-error-border: #f5c6cb;
+
+// Orange
+$bright-orange: #EB6609;
+
+// yellows
+$ce-status-yellow: #fdd400; // *
+$link-yellow: #fbf37f;
+$text-warning: #c09853;
+
+// greens
+$green_primary: #008396;
+$success-green: #27a4aa;
+$success-background-green: #D0E8EB;
+$ce-status-green: #089d51;
+$primary-green-title: #008590;
+$color-badge-success: #0b770b;
+$notification-success: #089051;
+$green-circle: #29a3a3;
+$background-green-tooltip: #399ead;
+$green-2: #e7f2f7;
+
+// blues
+$brand-blue: #0077aa; // *
+$link-blue: #2ca8e2;
+$link-blue-light: #80CBEE;
+$hover-blue: #258ab9;
+$hover-blue-1: #E9F6FC;
+$dropdown-hover-blue: #ceeaf7; // *
+$toggle-background: #67b5c0; // *
+$button-blue: #587080;
+$bright-green: #22a4b2;
+$button-blue-hover: #0277AA;
+$button-blue-active: #004c6d;
+$dark-desaturated-blue:#2E4250;
+$blue-math-symbols: #DCE9EF;
+$blue-equals-cell: #B1D5E7;
+$blue-total-cell: #BFDFEF;
+$blue-sub-title: #374B5B;
+$light-blue: #59BAE7;
+$edit-icon-blue: #2898CD;
+$more-link-blue: #4DB1E9;
+$row-hover-blue: #D4EDF9;
+// NOTE: above not in styleguide. comes from dropdown specs
+
+// Fund Metrics Dashboard
+$fd-yellow: #FDD400;
+$fd-blue: #2CA8E2;
+$fd-dark-blue: #20759E;
+$fd-light-blue: #B6E0F4;
+$fd-light-gray: #DCE1E4;
+$fd-error: #b94a48;
+
+// Client Management
+$investment-status-bar: #007a8d;
+$investment-status-h2: #008590;
+$signers-modal-block: #F3F7F9;
+
+// Notifications
+$gray-background: #3f5a6d;
+$sidebar-info-blue-light: $link-blue-light;
+$sidebar-success-green: $success-green;
+$sidebar-warning-orange: $warning-3;
+$sidebar-error-red: $error-main;
+
+// Operations Dashboard
+$od-ff-capital-call-column: #ebf0f4;
+$od-ff-distribution-column: #f8fafb;
+
+// Fund Events Dashboard
+$datepickerday-gray-light-hover: #D0DAF8;
+$datepickerday-gray-light-selected: #ECF4F8;
+$datepickerday-gray-selected: #4E5152;
+$datepickerday-blue: #447EB8;
+$datepickerday-gray-outside: #A7A7A7;
+
+// Investment Opportunities Specifics
+$qualification-purple: #691B57;
+
+//Investment Opportunities - Fund Categories
+$io-blue: #155A80;
+$io-green: #6BBC97;
+$io-purple: #691B57;
+$io-green-2: #27A4AA;
+$io-gray: #A2BACA;

@@ -1,0 +1,27 @@
+@mixin RGFilterContainer($align: left) {
+  @if $align == left {
+    left: calc(50% - 125px);
+  } @else {
+    right: calc(50% - 125px);
+  }
+}
+
+@mixin RGFilterTriangle($align: left) {
+  @if $align == left {
+    align-self: flex-start;
+    left: 100px;
+  } @else {
+    align-self: flex-end;
+    right: 100px;
+  }
+}
+
+@mixin RGFilterTriangleBorder($align: left) {
+  @if $align == left {
+    align-self: flex-start;
+    left: 99px;
+  } @else {
+    align-self: flex-end;
+    right: 99px;
+  }
+}

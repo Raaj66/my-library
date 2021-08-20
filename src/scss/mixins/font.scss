@@ -1,0 +1,85 @@
+@import "../variables/fonts";
+
+@mixin primary-font-light {
+  font-family: $primary-font-light;
+}
+
+@mixin primary-font {
+  font-family: $primary-font;
+}
+
+@mixin primary-font-bold {
+  font-family: $primary-font-bold;
+}
+
+@mixin primary-font-demibold {
+  font-family: $primary-font-demibold;
+}
+
+@mixin helvetica-neue-bold-cond {
+  font-family: $helvetica-neue-bold-cond;
+}
+
+@mixin helvetica-neue-cond {
+  font-family: $helvetica-neue-cond;
+}
+
+@mixin font($style: regular) {
+  @if $style == regular {
+    @include primary-font
+  } @else if $style == light {
+    @include primary-font-light
+  } @else if $style == semibold {
+    @include primary-font-demibold
+  } @else if $style == demibold {
+    @include primary-font-demibold
+  } @else if $style == bold {
+    @include primary-font-bold
+  } @else {
+    font-family: inherit;
+  }
+}
+
+/* font size mixins are designed to normalize line-height and font-size.
+   they should also ease the transition to avenir when
+   line-heights are done away with */
+
+@mixin size12line9 {
+  font-size: 12px;
+  line-height: 9px;
+}
+
+@mixin size14 {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin size16 {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+@mixin size16line23 {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+@mixin size18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin size24 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@mixin size28 {
+  font-size: 28px;
+  line-height: 33px;
+}
+
+@mixin size36 {
+  font-size: 36px;
+  line-height: 40px;
+}

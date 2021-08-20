@@ -1,0 +1,49 @@
+@mixin DCAdvisorFundFilterOverride {
+  > div > div {
+    width: 400px !important;
+    left: 0 !important;
+
+    &:before, &:after {
+      right: 13px !important;
+    }
+
+    > div > div > div > div > label:nth-child(2) {
+      max-width: 353px !important;
+    }
+
+    > div > button {
+      width: 123px !important;
+
+      &:nth-child(1) {
+        left: 40px !important;
+      }
+
+      &:nth-child(2) {
+        right: 40px !important;
+      }
+
+    }
+  }
+}
+
+@mixin DCAdvisorFundFilterOverrideMedia {
+  margin-right: 4px;
+  > div {
+    & > input {
+      width: 389px !important;
+    }
+
+    & > i {
+      left: 361px !important;
+    }
+
+    > div {
+      width: 389px !important;
+      left: 0 !important;
+
+      > div > div > div > div > label:nth-child(2) {
+        max-width: 342px !important;
+      }
+    }
+  }
+}
