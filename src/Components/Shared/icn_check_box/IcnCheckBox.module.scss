@@ -1,0 +1,161 @@
+
+@import "../../../scss/variables/color";
+@import "../../../scss/variables/image_url";
+@import "../../../scss/mixins/transition";
+
+
+.check_wrapper {
+  display: inline-flex;
+  position: relative;
+  text-align: center;
+  box-shadow: 0;
+
+  vertical-align: middle;
+  margin-bottom: 0px;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .check_box_holder {
+    @include transition(border-color, box-shadow 300ms linear);
+
+    height: 20px;
+    width: 20px;
+    flex: 0 0 auto;
+    cursor: pointer;
+
+    .checkbox_svg {
+      pointer-events: none;
+    }
+
+    .checkbox_unchecked, .checkbox_radio_checked, .checkbox_radio_unchecked, .checkbox_partial, .checkbox_checked {
+      vertical-align: top;
+    }
+  }
+
+  &.medium .check_box_holder {
+    height: 15px;
+    width: 15px;
+  }
+
+  &.is_radio {
+    height: 20px;
+    width: 20px;
+    .check_box_holder {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+    }
+  }
+
+  &.medium.is_radio {
+    height: 15px;
+    width: 15px;
+    .check_box_holder {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &.medium {
+    .checkbox_unchecked, .checkbox_checked, .checkbox_partial, .checkbox_radio_checked, .checkbox_radio_unchecked {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .disabled {
+    background-color: $gray-3;
+    border-color: $gray-2;
+    cursor: not-allowed;
+
+    .checkbox_unchecked, .checkbox_checked {
+      g:first-child {
+        fill: $white;
+      }
+      g:nth-child(2) {
+        g {
+          stroke: $brand-gray-lite;
+        }
+        path {
+          fill: $brand-gray-lite;
+        }
+      }
+    }
+    .checkbox_partial {
+      rect[data-name="Rectangle 236"] {
+        fill: $white;
+      }
+
+      path[data-name="Path 583"] {
+        stroke: $brand-gray-lite;
+        fill: $brand-gray-lite;
+      }
+
+      rect[data-name="Rectangle 237"] {
+        fill: $brand-gray-lite;
+      }
+    }
+    .checkbox_radio_checked, .checkbox_radio_unchecked {
+      circle:first-child {
+        stroke: $brand-gray-lite;
+        fill: $white;
+      }
+      circle:nth-child(2) {
+        stroke: $brand-gray-lite;
+        fill: $brand-gray-lite;
+      }
+    }
+  }
+
+  &.glow {
+    .check_box_holder {
+      box-shadow: 0 0 2px 1px $warning-3;
+      .checkbox_unchecked, .checkbox_checked {
+        g:first-child {
+          stroke: $warning-3;
+        }
+      }
+      .checkbox_partial {
+        g[data-name="Group 1060"] {
+          stroke: $warning-3;
+        }
+      }
+      .checkbox_radio_checked, .checkbox_radio_unchecked {
+        circle:first-child {
+          stroke: $warning-3;
+        }
+      }
+    }
+
+    &.medium {
+      .check_box_holder {
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+
+  &.label_standard_size {
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__label {
+    font-weight: 400;
+    color: $gray-primary;
+    cursor: pointer;
+    line-height: 20px;
+    margin-left: 8px;
+    text-align: start;
+  }
+
+  &.medium {
+    .check_wrapper__label {
+      line-height: 15px;
+      font-size: 12px;
+    }
+  }
+}
