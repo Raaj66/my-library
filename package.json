@@ -1,5 +1,5 @@
 {
-  "name": "react-component-library",
+  "name": "@icapitalnetwork/react-component-library",
   "version": "2.0.2",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -8,6 +8,10 @@
   ],
   "types": "build/index.d.ts",
   "description": " React component library using Rollup, TypeScript, Sass and Storybook",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/icapitalnetwork/react-component-library-poc",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "build:lib": "rollup -c && npm pack",
@@ -27,7 +31,7 @@
     "Sass",
     "Storybook"
   ],
-  "author": "ICapital Network",
+  "author": "iCapital Network",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -83,5 +87,10 @@
     "trim": "^1.0.1",
     "browserslist": "^4.16.8",
     "glob-parent": "^6.0.1"
+  },
+  "dependencies": {
+    "classname": "^0.0.0",
+    "react-day-picker": "^7.4.10",
+    "react-tooltip": "^4.2.21"
   }
 }

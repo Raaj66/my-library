@@ -1,0 +1,84 @@
+@import "../../../../../scss/variables/color";
+@import "../../../../../scss/mixins/font";
+@import "../../../../../scss/mixins/transition";
+
+.icn_radio {
+  font-weight: inherit;
+  position: relative;
+  padding-left: 30px;
+  cursor: text;
+
+  &.vertical {
+    display: block;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &.inline {
+    margin-right: 10px;
+  }
+
+  &.indent {
+    margin-left: 15px;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input:checked ~ .radio_button {
+    border-color: $black;
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.radio_button {
+  @include transition(border 300ms linear, box-shadow 300ms linear);
+  box-shadow: 0;
+
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid $gray-extra-lite;
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $black;
+  }
+}
+
+.icn_radio {
+  &.disabled {
+    color: $brand-gray-lite;
+    input {
+      &~ .radio_button, &:checked ~ .radio_button {
+        border-color: $brand-gray-lite;
+				cursor: not-allowed;
+      }
+    }
+    .radio_button {
+      &:after {
+        background: $brand-gray-lite;
+      }
+    }
+  }
+  &.incomplete .radio_button {
+    box-shadow: 0 0 2px 2px $warning-4;
+    border-color: $warning-4;
+  }
+}
