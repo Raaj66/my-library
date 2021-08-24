@@ -1,0 +1,37 @@
+@import "../../../../../scss/variables/color";
+@import "../../../../../scss/mixins/font";
+@import "../../../../../scss/mixins/transition";
+
+.icn_textarea_container:focus {
+  .icn_textarea {
+    border: 2px solid $gray-primary
+  }
+}
+
+.icn_textarea {
+  @include transition(box-shadow 300ms linear, border-color 300ms linear);
+  box-shadow: 0;
+
+  resize: none;
+  border: 1px solid $brand-gray;
+  outline: none;
+  padding: 3px 12px;
+  box-sizing: border-box;
+  &:focus {
+    border: 2px solid $gray-primary;
+  }
+  &::placeholder {
+    color: $gray-light;
+  }
+
+  &:disabled {
+    background-color: $gray-3;
+    border-color: $gray-2;
+    cursor: not-allowed;
+  }
+
+  &.incomplete {
+    box-shadow: 0 0 2px 1px $warning-4;
+    border-color: $warning-4;
+  }
+}
