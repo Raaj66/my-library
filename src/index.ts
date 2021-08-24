@@ -7,6 +7,7 @@ import {
   IcnSelect,
   IcnTextarea,
 } from "./Components/Shared/Form";
+import IcnCheckBox from './Components/Shared/icn_check_box/IcnCheckBox';
 
 import useOnClickOutside from "./hooks/useOnClickOutside";
 
@@ -20,6 +21,7 @@ export {
   IcnRadio,
   IcnSelect,
   IcnTextarea,
+  IcnCheckBox,
   PRIVATE_FIELD_MASK_ATTRIBUTE,
   ESCAPE_KEY,
   useOnClickOutside,
