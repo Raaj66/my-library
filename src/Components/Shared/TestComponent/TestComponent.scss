@@ -12,6 +12,10 @@
     @include heading;
   }
 
+  .footer {
+    display: flex;
+  }
+
   &.test-component-secondary {
     background-color: $harvey-black;
     color: $harvey-white;
