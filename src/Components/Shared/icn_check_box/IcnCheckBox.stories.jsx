@@ -16,7 +16,7 @@ const onCheckBoxClicked = (setState, state) => {
 //   });
 };
 
-storiesOf('Components/IcnCheckBox', module)
+storiesOf('Components/Shared/IcnCheckBox', module)
   //.addDecorator(FieldDecorator)
   .addDecorator(withKnobs)
   .add('default', () => (

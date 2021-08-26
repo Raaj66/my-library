@@ -37,7 +37,7 @@ const IcnButtonStory = ({
 );
 
 export default {
-  title: 'Components/IcnButton',
+  title: 'Components/Shared/IcnButton',
   component: IcnButtonStory,
   parameters: {
     docs: {
