@@ -5,7 +5,6 @@ import React from 'react';
 import IcnButton from './IcnButton';
 import { action } from '@storybook/addon-actions';
 
-
 const IcnButtonStory = ({
   id,
   text,
@@ -135,9 +134,11 @@ export default {
   },
 };
 
-export const Button = (args) => <IcnButtonStory {...args} />;
+export const Primary = (args) => <IcnButtonStory {...args} />;
+export const Secondary = (args) => <IcnButtonStory {...args} />;
+export const Tertiary = (args) => <IcnButtonStory {...args} />;
 
-Button.args = {
+Primary.args = {
   id: '',
   text: 'Save',
   children: null,
@@ -151,3 +152,14 @@ Button.args = {
   iconSvg: null,
   iconClassName: '',
 };
+
+Secondary.args = {
+  ...Primary.args,
+  styleType: 'secondary',
+};
+
+Tertiary.args = {
+  ...Primary.args,
+  styleType: 'tertiary',
+};
+
