@@ -1,3 +1,3 @@
-import SlidingDrawer from "./SlidingDrawer";
+import SlidingDrawer from './SlidingDrawer';
 
 export default SlidingDrawer;

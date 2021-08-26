@@ -1,0 +1,8 @@
+paths.js
+partials/**
+public/**
+__tests__/**
+src/react-app-env.d.ts
+src/setupTests.ts
+node_modules
+build

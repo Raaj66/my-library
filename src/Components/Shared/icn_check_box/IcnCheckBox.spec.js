@@ -1,11 +1,11 @@
 import React from 'react';
-import { mount, shallow ,configure} from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 //import faker from 'faker';
 //import _ from 'lodash';
-import IcnCheckBox from './IcnCheckBox'
-configure({adapter: new Adapter()});
+import IcnCheckBox from './IcnCheckBox';
+configure({ adapter: new Adapter() });
 const generateProps = (custom = {}) => ({
   callback: jest.fn(),
   checked: false,
@@ -13,7 +13,7 @@ const generateProps = (custom = {}) => ({
   ...custom,
 });
 
-const setUp = props => shallow(<IcnCheckBox {...props} />);
+const setUp = (props) => shallow(<IcnCheckBox {...props} />);
 
 describe('IcnCheckBox', () => {
   let props, wrapper, input;
@@ -33,9 +33,7 @@ describe('IcnCheckBox', () => {
     });
 
     it('Renders input', () => {
-      expect(
-        input.length
-      ).toBe(1);
+      expect(input.length).toBe(1);
     });
 
     it('callback on change', () => {
@@ -44,29 +42,23 @@ describe('IcnCheckBox', () => {
     });
 
     it('not disabled', () => {
-      expect(
-        input.props().disabled
-      ).toBe(false);
+      expect(input.props().disabled).toBe(false);
     });
 
     it('not checked', () => {
-      expect(
-        input.props().checked
-      ).toBe(false);
+      expect(input.props().checked).toBe(false);
     });
   });
 
   describe('without selection', () => {
     beforeEach(() => {
-      props = generateProps({checked: true});
+      props = generateProps({ checked: true });
       wrapper = setUp(props);
       input = wrapper.find('input');
     });
 
     it('checked', () => {
-      expect(
-        input.props().checked
-      ).toBe(true);
+      expect(input.props().checked).toBe(true);
     });
 
     it('callback on change', () => {
@@ -77,22 +69,20 @@ describe('IcnCheckBox', () => {
 
   describe('as disabled', () => {
     beforeEach(() => {
-      props = generateProps({disabled: true});
+      props = generateProps({ disabled: true });
       wrapper = setUp(props);
       input = wrapper.find('input');
     });
 
     it('is disabled', () => {
-      expect(
-        input.props().disabled
-      ).toBe(true);
+      expect(input.props().disabled).toBe(true);
     });
   });
 
   describe('with label', () => {
     it('renders label after checkbox', () => {
       props = generateProps();
-      wrapper = setUp({...props, label: 'some text'});
+      wrapper = setUp({ ...props, label: 'some text' });
       expect(wrapper.childAt(2).text()).toEqual('some text');
     });
   });
