@@ -21,7 +21,7 @@ In order to publish the final package to GitHub Private Repository, you will nee
 
 - Create a private token in your GitHub account [GitHub Developer Settings](https://github.com/settings/tokens)
   1. Choose `Generate a new token`;
-  2. Choose the Expiration for the token (you can set it for `No expiration` although that is strong unadvice);
+  2. Choose the Expiration for the token (you can set it to `No expiration`, although this is strongly not advise);
   3. Give permissions for that token as `write:packages`, `delete:packages`;
   4. Hit the `Generate token` button and copy the hash generated;
 
