@@ -20,10 +20,10 @@ It also features:
 In order to publish the final package to GitHub Private Repository, you will need to do the following steps:
 
 - Create a private token in your GitHub account [GitHub Developer Settings](https://github.com/settings/tokens)
-  1 - Choose `Generate a new token`;
-  2 - Choose the Expiration for the token (you can set it for `No expiration` although that is strong unadvice);
-  3 - Give permissions for that token as `write:packages`, `delete:packages`;
-  4 - Hit the `Generate token` button and copy the hash generated;
+  1. Choose `Generate a new token`;
+  2. Choose the Expiration for the token (you can set it for `No expiration` although that is strong unadvice);
+  3. Give permissions for that token as `write:packages`, `delete:packages`;
+  4. Hit the `Generate token` button and copy the hash generated;
 
 - On your local computer, in the root of the project, create a new file and name it as `.npmrc`;
 - Inside copy and paste the following code:
@@ -35,9 +35,9 @@ In order to publish the final package to GitHub Private Repository, you will nee
     - Open your Command Prompt / Terminal and type the following command:
       `npm login --scope=@icapitalnetwork --registry=https://npm.pkg.github.com`;
     - After that, the Command Prompt / Terminal will ask the follwoing:
-      1 - Git username
-      2 - Git email
-      3 - Your git authentication (your github token to authenticate on iCapital Network git repos)
+      1. Git username
+      2. Git email
+      3. Your git authentication (your github token to authenticate on iCapital Network git repos)
 
 ## Development
 
