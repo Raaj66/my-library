@@ -21,7 +21,7 @@ In order to publish the final package to GitHub Private Repository, you will nee
 
 - Create a private token in your GitHub account [GitHub Developer Settings](https://github.com/settings/tokens)
   1. Choose `Generate a new token`;
-  2. Choose the Expiration for the token (you can set it for `No expiration` although that is strong unadvice);
+  2. Choose the Expiration for the token (you can set it to `No expiration`, although this is strongly not advise);
   3. Give permissions for that token as `write:packages`, `delete:packages`;
   4. Hit the `Generate token` button and copy the hash generated;
 
@@ -120,6 +120,28 @@ which will install the local component library as a dependency in `test-app`. It
 ```
 
 Your components can then be imported and used in that project.
+
+### Installing Component Library from GitHub Private Repository
+You can install the published package in your project with the following command:
+
+```
+npm install @icapitalnetwork/react-component-library
+```
+
+In order to do that you will need to add to the root of your project an `.npmrc` file with the following content:
+
+```
+registry=https://registry.npmjs.org/
+@icapitalnetwork:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=[YOUR_GENERATED_TOKEN]
+```
+
+  - To generate your token, access your [GitHub -> Settings -> Developer Settings -> Personal access tokens](https://github.com/settings/tokens) and generate a new token, when setting the new token do the following configs:
+    1. Set expiration time (`No expiration` is not recommended);
+    2. Set the `read:packages` permissions
+    3. Hit the `Generate token` button and copy the hash provided
+
+The first time your npm installation will take a bit longer
 
 ## Publishing
 
