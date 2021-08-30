@@ -15,7 +15,32 @@ It also features:
 - [Jest](https://jestjs.io/) and [React Testing Library](https://github.com/testing-library/react-testing-library) enabling testing of the components
 
 
+## IMPORTANT  CONFIGURATION
+
+In order to publish the final package to GitHub Private Repository, you will need to do the following steps:
+
+- Create a private token in your GitHub account [GitHub Developer Settings](https://github.com/settings/tokens)
+  1. Choose `Generate a new token`;
+  2. Choose the Expiration for the token (you can set it to `No expiration`, although this is strongly not advise);
+  3. Give permissions for that token as `write:packages`, `delete:packages`;
+  4. Hit the `Generate token` button and copy the hash generated;
+
+- On your local computer, in the root of the project, create a new file and name it as `.npmrc`;
+- Inside copy and paste the following code:
+  `//npm.pkg.github.com/:_authToken=[YOUR_GENERATED_TOKEN]`
+  Change the `[YOUR_GENERATED_TOKEN]` with the token you generate in the bellow
+
+  ### Important note
+  If you are not able to publish, you might have to set the scope of your package, so you might have to do the following:
+    - Open your Command Prompt / Terminal and type the following command:
+      `npm login --scope=@icapitalnetwork --registry=https://npm.pkg.github.com`;
+    - After that, the Command Prompt / Terminal will ask the follwoing:
+      1. Git username
+      2. Git email
+      3. Your git authentication (your github token to authenticate on iCapital Network git repos)
+
 ## Development
+
 
 ### Testing
 
@@ -42,7 +67,7 @@ To export your Storybook as static files:
 ```
 yarn run storybook:export
 ```
-You can then serve the files under `storybook-static` using S3, GitHub pages, Express etc. 
+You can then serve the files under `storybook-static` using S3, GitHub pages, Express etc.
 
 To build and package :
 
@@ -95,6 +120,28 @@ which will install the local component library as a dependency in `test-app`. It
 ```
 
 Your components can then be imported and used in that project.
+
+### Installing Component Library from GitHub Private Repository
+You can install the published package in your project with the following command:
+
+```
+npm install @icapitalnetwork/react-component-library
+```
+
+In order to do that you will need to add to the root of your project an `.npmrc` file with the following content:
+
+```
+registry=https://registry.npmjs.org/
+@icapitalnetwork:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=[YOUR_GENERATED_TOKEN]
+```
+
+  - To generate your token, access your [GitHub -> Settings -> Developer Settings -> Personal access tokens](https://github.com/settings/tokens) and generate a new token, when setting the new token do the following configs:
+    1. Set expiration time (`No expiration` is not recommended);
+    2. Set the `read:packages` permissions
+    3. Hit the `Generate token` button and copy the hash provided
+
+The first time your npm installation will take a bit longer
 
 ## Publishing
 

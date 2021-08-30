@@ -2,12 +2,8 @@ import { useEffect } from 'react';
 
 const useOnClickOutside = (
   ref,
-  {
-    handler = () => { },
-    events = ['mousedown', 'touchstart'],
-    except = () => false,
-    disable = false,
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  { handler = () => {}, events = ['mousedown', 'touchstart'], except = () => false, disable = false }
 ) => {
   useEffect(() => {
     const listener = (event) => {
