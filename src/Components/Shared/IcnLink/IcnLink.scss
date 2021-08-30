@@ -1,0 +1,11 @@
+
+@import "../../../scss/variables/color";
+@import "../../../scss/mixins/font";
+.IcnLink {
+  color: $link-blue;
+  font-family: $primary-font-demibold;
+
+  &:hover {
+    color: $link-blue;
+  }
+}
