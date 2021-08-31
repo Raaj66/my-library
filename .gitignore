@@ -1,6 +1,7 @@
 # Project specific ignores
 build/
 storybook-static/
+package/
 
 # Logs
 logs
