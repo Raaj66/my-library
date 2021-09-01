@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import TestComponent from './TestComponent';
 import { TestComponentProps } from './TestComponent.types';
 
-
 describe('Test Component', () => {
   let props: TestComponentProps;
 
@@ -14,6 +13,7 @@ describe('Test Component', () => {
     };
   });
 
+  // eslint-disable-next-line react/jsx-props-no-spreading
   const renderComponent = () => render(<TestComponent {...props} />);
 
   it('should have primary className with default props', () => {

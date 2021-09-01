@@ -38,6 +38,16 @@
     "import/no-named-as-default": "off",
     "no-use-before-define": "off",
     "import/default": "off",
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
     "prettier/prettier": ["warn", { "tabWidth": 2, "semi": true, "singleQuote": true, "printWidth": 120 }],
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
