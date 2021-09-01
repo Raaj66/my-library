@@ -1,8 +1,6 @@
 module.exports = (componentName) => ({
   content: `// Generated with util/create-component.js
-export interface ${componentName}Props {
-    foo: string;
-}
+export const ${componentName.toUpperCase()} = 'const_value'
 `,
-  extension: `.types.ts`,
+  extension: `.ts`,
 });
