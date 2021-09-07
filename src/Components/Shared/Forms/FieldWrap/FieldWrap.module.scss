@@ -1,0 +1,44 @@
+@import "../../../../scss/mixins/form";
+@import "../../../../scss/mixins/flexbox";
+
+$sizes: 'xs', 'sm', 'md', 'full', 'full_380', 'full_fluid';
+
+@each $i in $sizes{
+  .#{nth($i, 1)} {
+    @include field-wrap(#{nth($i, 1)});
+    margin-bottom: 15px;
+
+    &.no_bot_mar {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// side by side, [ field1 | field2 ]
+.full_inline {
+  @include field-wrap('full');
+  @include flexbox();
+  @include justify-content('space-between');
+  margin-bottom: 15px;
+
+  &.no_bot_mar {
+    margin-bottom: 0;
+  }
+}
+
+.right_align {
+  margin-left: auto;
+}
+
+.left {
+  float: left;
+  overflow: hidden;
+}
+
+.right {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}

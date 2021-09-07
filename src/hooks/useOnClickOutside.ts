@@ -1,12 +1,25 @@
-import { useEffect } from 'react';
+import { RefObject, useEffect } from 'react';
 
-const useOnClickOutside = (
+const useOnClickOutside: (
+  ref: RefObject<any>,
+  {
+    handler,
+    events,
+    except,
+    disable,
+  }: {
+    handler?: (event: MouseEvent | KeyboardEvent) => void;
+    events?: string[];
+    except?: (event: MouseEvent | KeyboardEvent ) => boolean;
+    disable?: boolean;
+  }
+) => void = (
   ref,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   { handler = () => {}, events = ['mousedown', 'touchstart'], except = () => false, disable = false }
 ) => {
   useEffect(() => {
-    const listener = (event) => {
+    const listener = (event: MouseEvent | KeyboardEvent) => {
       if (!ref.current || ref.current.contains(event.target) || except(event)) {
         return;
       }

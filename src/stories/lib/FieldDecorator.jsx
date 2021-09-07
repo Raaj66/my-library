@@ -1,5 +1,5 @@
 import React from 'react';
-import FieldWrap from '../../Components/Shared/Form/components/field_wrap/FieldWrap';
+import { FieldWrap } from '../../index';
 
 const styles = {
   padding: '8px',
@@ -8,9 +8,7 @@ const styles = {
 const FieldDecorator = (storyFn) => (
   <div style={styles}>
     <FieldWrap size="full">
-      <FieldWrap size="full_fluid">
-        { storyFn() }
-      </FieldWrap>
+      <FieldWrap size="full_fluid">{storyFn()}</FieldWrap>
     </FieldWrap>
   </div>
 );

@@ -1,33 +1,31 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)",
-            "../src/**/*.stories.mdx"
-          ],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)', '../src/**/*.stories.mdx'],
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [
-     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-     "@storybook/addon-knobs",
-    "@storybook/addon-a11y",
-     "@storybook/addon-postcss",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-postcss',
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
-      use: ["style-loader", "css-loader", "sass-loader"],
-      include: path.resolve(__dirname, "../")
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../'),
     });
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      loader: require.resolve("babel-loader"),
+      loader: require.resolve('babel-loader'),
       options: {
-        presets: [["react-app", { flow: false, typescript: true }]]
-      }
+        presets: [['react-app', { flow: false, typescript: true }]],
+      },
     });
-    config.resolve.extensions.push(".ts", ".tsx",".js",".jsx");
+    config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx');
 
     return config;
-  }
+  },
 };

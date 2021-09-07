@@ -14,7 +14,8 @@ export default class StateContainer extends Component {
   }
 
   render() {
-    return this.props?.children(this.update, this.state);
+    const { children } = this.props;
+    return children && children(this.update, this.state);
   }
 }
 
