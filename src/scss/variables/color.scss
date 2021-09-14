@@ -3,8 +3,8 @@
 // gray-scale
 $brand-gray: #a2baca;
 $brand-gray-lite: #d6e1e8;
-$black: #000000;
-$white: #ffffff;
+$black: #000;
+$white: #fff;
 $gray-primary: #2e4250;
 $link-disabled: #dce1e4;
 $dc_grey_active: #dde5ea; // *
@@ -12,7 +12,7 @@ $gray-light: #738794;
 $gray-light-1: #708794;
 $gray-extra-lite: #a7b4bc;
 $gray-hover: #8d9da7;
-$grey-read-only: #F2F6F8;
+$grey-read-only: #f2f6f8;
 $grey-scroller: #bccdd9;
 $grey-track: #eaf1f6;
 // NOTE: above is currently called 'gray-hover' in style guide but isn't being used for hovers
@@ -23,11 +23,11 @@ $gray-1: #edf0f1; // *
 $gray-2: #cad2d7;
 $gray-3: #f5f8fa;
 $gray-4: #6b879a;
-$gray-5: #EEEEEE;
-$gray-6: #989A9C;
+$gray-5: #eee;
+$gray-6: #989a9c;
 $gray-7: #bdc3c7;
 $gray-8: #dce9ef;
-$gray-9: #F5F8F9;
+$gray-9: #f5f8f9;
 
 // reds
 $error-main: #cc2718;
@@ -44,7 +44,7 @@ $bootstrap-error-bg: #f8d7da;
 $bootstrap-error-border: #f5c6cb;
 
 // Orange
-$bright-orange: #EB6609;
+$bright-orange: #eb6609;
 
 // yellows
 $ce-status-yellow: #fdd400; // *
@@ -54,7 +54,7 @@ $text-warning: #c09853;
 // greens
 $green_primary: #008396;
 $success-green: #27a4aa;
-$success-background-green: #D0E8EB;
+$success-background-green: #d0e8eb;
 $ce-status-green: #089d51;
 $primary-green-title: #008590;
 $color-badge-success: #0b770b;
@@ -64,40 +64,40 @@ $background-green-tooltip: #399ead;
 $green-2: #e7f2f7;
 
 // blues
-$brand-blue: #0077aa; // *
+$brand-blue: #07a; // *
 $link-blue: #2ca8e2;
-$link-blue-light: #80CBEE;
+$link-blue-light: #80cbee;
 $hover-blue: #258ab9;
-$hover-blue-1: #E9F6FC;
+$hover-blue-1: #e9f6fc;
 $dropdown-hover-blue: #ceeaf7; // *
 $toggle-background: #67b5c0; // *
 $button-blue: #587080;
 $bright-green: #22a4b2;
-$button-blue-hover: #0277AA;
+$button-blue-hover: #0277aa;
 $button-blue-active: #004c6d;
-$dark-desaturated-blue:#2E4250;
-$blue-math-symbols: #DCE9EF;
-$blue-equals-cell: #B1D5E7;
-$blue-total-cell: #BFDFEF;
-$blue-sub-title: #374B5B;
-$light-blue: #59BAE7;
-$edit-icon-blue: #2898CD;
-$more-link-blue: #4DB1E9;
-$row-hover-blue: #D4EDF9;
+$dark-desaturated-blue: #2e4250;
+$blue-math-symbols: #dce9ef;
+$blue-equals-cell: #b1d5e7;
+$blue-total-cell: #bfdfef;
+$blue-sub-title: #374b5b;
+$light-blue: #59bae7;
+$edit-icon-blue: #2898cd;
+$more-link-blue: #4db1e9;
+$row-hover-blue: #d4edf9;
 // NOTE: above not in styleguide. comes from dropdown specs
 
 // Fund Metrics Dashboard
-$fd-yellow: #FDD400;
-$fd-blue: #2CA8E2;
-$fd-dark-blue: #20759E;
-$fd-light-blue: #B6E0F4;
-$fd-light-gray: #DCE1E4;
+$fd-yellow: #fdd400;
+$fd-blue: #2ca8e2;
+$fd-dark-blue: #20759e;
+$fd-light-blue: #b6e0f4;
+$fd-light-gray: #dce1e4;
 $fd-error: #b94a48;
 
 // Client Management
 $investment-status-bar: #007a8d;
 $investment-status-h2: #008590;
-$signers-modal-block: #F3F7F9;
+$signers-modal-block: #f3f7f9;
 
 // Notifications
 $gray-background: #3f5a6d;
@@ -111,18 +111,18 @@ $od-ff-capital-call-column: #ebf0f4;
 $od-ff-distribution-column: #f8fafb;
 
 // Fund Events Dashboard
-$datepickerday-gray-light-hover: #D0DAF8;
-$datepickerday-gray-light-selected: #ECF4F8;
-$datepickerday-gray-selected: #4E5152;
-$datepickerday-blue: #447EB8;
-$datepickerday-gray-outside: #A7A7A7;
+$datepickerday-gray-light-hover: #d0daf8;
+$datepickerday-gray-light-selected: #ecf4f8;
+$datepickerday-gray-selected: #4e5152;
+$datepickerday-blue: #447eb8;
+$datepickerday-gray-outside: #a7a7a7;
 
 // Investment Opportunities Specifics
-$qualification-purple: #691B57;
+$qualification-purple: #691b57;
 
 //Investment Opportunities - Fund Categories
-$io-blue: #155A80;
-$io-green: #6BBC97;
-$io-purple: #691B57;
-$io-green-2: #27A4AA;
-$io-gray: #A2BACA;
+$io-blue: #155a80;
+$io-green: #6bbc97;
+$io-purple: #691b57;
+$io-green-2: #27a4aa;
+$io-gray: #a2baca;

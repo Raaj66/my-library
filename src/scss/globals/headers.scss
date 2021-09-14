@@ -1,12 +1,12 @@
-@import "~scss/mixins/font";
-@import "~scss/variables/color";
+@import '~scss/mixins/font';
+@import '~scss/variables/color';
 
 .primary_header {
-  @include size28;
-  @include primary-font-light;
+	@include size28;
+	@include primary-font-light;
 }
 
 .secondary_header {
-  @include size24;
-  color: $green_primary;
+	@include size24;
+	color: $green_primary;
 }

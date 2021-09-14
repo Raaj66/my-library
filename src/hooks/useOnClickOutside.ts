@@ -10,7 +10,7 @@ const useOnClickOutside: (
   }: {
     handler?: (event: MouseEvent | KeyboardEvent) => void;
     events?: string[];
-    except?: (event: MouseEvent | KeyboardEvent ) => boolean;
+    except?: (event: MouseEvent | KeyboardEvent) => boolean;
     disable?: boolean;
   }
 ) => void = (

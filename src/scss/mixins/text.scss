@@ -1,17 +1,17 @@
-@import "../mixins/font";
+@import '../mixins/font';
 
 @mixin textformat($font: regular, $size: null, $height: null, $spacing: null) {
-  @include font($font);
+	@include font($font);
 
-  @if $size != null {
-    font-size: $size;
-  }
+	@if $size != null {
+		font-size: $size;
+	}
 
-  @if $height != null {
-    line-height: $height;
-  }
+	@if $height != null {
+		line-height: $height;
+	}
 
-  @if $spacing != null {
-    letter-spacing: $spacing;
-  }
+	@if $spacing != null {
+		letter-spacing: $spacing;
+	}
 }

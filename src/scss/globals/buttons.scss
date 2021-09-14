@@ -1,57 +1,58 @@
-@import "~scss/variables/color";
-@import "~scss/mixins/font";
+@import '~scss/variables/color';
+@import '~scss/mixins/font';
 
 .icn-button {
-  @include primary-font;
-  color: white;
-  font-size: 12px;
-  background-color: $link-blue;
-  border: 2px solid $link-blue;
-  padding: 5px 40px;
-  border-radius: 15px;
-  cursor: pointer;
-  text-transform: uppercase;
+	@include primary-font;
+	background-color: $link-blue;
+	border: 2px solid $link-blue;
+	border-radius: 15px;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	padding: 5px 40px;
+	text-transform: uppercase;
 
-  &:hover {
-    background-color: $hover-blue;
-    border-color: $hover-blue;
-    color: white;
-    text-decoration: none;
-  }
+	&:hover {
+		background-color: $hover-blue;
+		border-color: $hover-blue;
+		color: white;
+		text-decoration: none;
+	}
 }
+
 .icn-button--white {
-  @extend .icn-button;
+	@extend .icn-button;
+	background-color: white;
+	border: 2px solid $gray-extra-lite;
 
-  color: $gray-extra-lite;
-  background-color: white;
-  border: 2px solid $gray-extra-lite;
+	color: $gray-extra-lite;
 
-  &:hover {
-    background-color: white;
-    border-color: $gray-light;
-    color: $gray-light;
-  }
+	&:hover {
+		background-color: white;
+		border-color: $gray-light;
+		color: $gray-light;
+	}
 }
 
 .icn-button--large {
-  @extend .icn-button;
+	@extend .icn-button;
+	border-radius: 20px;
+	font-size: 16px;
 
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 25px;
-  border-radius: 20px;
+	font-weight: bold;
+	padding: 8px 25px;
 }
 
 .icn-button--disabled,
 .icn-button--disabled:hover {
-  pointer-events: none;
-  opacity: 0.2;
+	opacity: 0.2;
+	pointer-events: none;
 }
 
 .icn-button--link {
-  background: none;
-  border: none;
-  padding: 0;
-  text-decoration: underline;
-  cursor: pointer;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	text-decoration: underline;
 }

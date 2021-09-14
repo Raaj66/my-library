@@ -1,66 +1,69 @@
 .dc_filter_drop_downs_wrapper {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 30px;
 
-  .dc_drop_down_filter_container:not(:last-child) {
-    margin-right: 4px;
-  }
+	.dc_drop_down_filter_container:not(:last-child) {
+		margin-right: 4px;
+	}
 
-  .dc_drop_down_filter_container:not(:only-child) {
-    margin-top: 15px;
-  }
+	.dc_drop_down_filter_container:not(:only-child) {
+		margin-top: 15px;
+	}
 }
 
 .dc_drop_down_filter_container {
-  display: inline-block;
+	display: inline-block;
 }
 
 @media (min-width: 1333px) {
-  .dc_filter_drop_downs_wrapper {
-    .dc_drop_down_filter_container:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
+	.dc_filter_drop_downs_wrapper {
+		.dc_drop_down_filter_container:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
 }
 
 @media (max-width: 1290px) {
-  .dc_filter_drop_downs_wrapper > .dc_drop_down_filter_container {
-    &:nth-child(6) {
-      > div > div > div:nth-child(2)  {
-        left: -90px !important;
+	.dc_filter_drop_downs_wrapper > .dc_drop_down_filter_container {
+		&:nth-child(6) {
+			> div > div > div:nth-child(2) {
+				left: -90px !important;
 
-        &:before, &:after {
-          right: 17px !important;
-        }
-      }
-    }
-  }
+				&::before,
+				&::after {
+					right: 17px !important;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1334px) and (max-width: 1340px) {
-  .dc_filter_drop_downs_wrapper > .dc_drop_down_filter_container {
-    &:nth-child(6) {
-      > div > div > div:nth-child(2) {
-        left: -90px !important;
+	.dc_filter_drop_downs_wrapper > .dc_drop_down_filter_container {
+		&:nth-child(6) {
+			> div > div > div:nth-child(2) {
+				left: -90px !important;
 
-        &:before, &:after {
-          right: 17px !important;
-        }
-      }
-    }
-  }
+				&::before,
+				&::after {
+					right: 17px !important;
+				}
+			}
+		}
+	}
 }
 
 .dc_filter_drop_downs_wrapper > .dc_drop_down_filter_container {
-  &:first-child {
-    > div > div > div:nth-child(2) {
-      left: 0 !important;
+	&:first-child {
+		> div > div > div:nth-child(2) {
+			left: 0 !important;
 
-      &:before, &:after {
-        right: 108px !important;
-      }
-    }
-  }
+			&::before,
+			&::after {
+				right: 108px !important;
+			}
+		}
+	}
 }

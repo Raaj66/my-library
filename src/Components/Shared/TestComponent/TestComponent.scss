@@ -1,23 +1,23 @@
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 .test-component {
-  background-color: $harvey-white;
-  border: 1px solid $harvey-black;
-  padding: 16px;
-  width: 360px;
-  text-align: center;
+	background-color: $harvey-white;
+	border: 1px solid $harvey-black;
+	padding: 16px;
+	text-align: center;
+	width: 360px;
 
-  .heading {
-    @include heading;
-  }
+	.heading {
+		@include heading;
+	}
 
-  .footer {
-    display: flex;
-  }
+	.footer {
+		display: flex;
+	}
 
-  &.test-component-secondary {
-    background-color: $harvey-black;
-    color: $harvey-white;
-  }
+	&.test-component-secondary {
+		background-color: $harvey-black;
+		color: $harvey-white;
+	}
 }
