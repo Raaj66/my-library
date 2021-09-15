@@ -1,0 +1,55 @@
+# test.yml
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update npmrc with authtoken
+        run: sed -i -e 's@[INPUT_YOUR_TOKEN_HERE]@${{ secrets.GITHUB_TOKEN }}@g' .npmrc
+
+      - name: Get node version
+        id: node-version
+        run: echo "::set-output name=version::$(cat .nvmrc)"
+
+      - name: Use Node.js ${{ steps.node-version.outputs.version }}
+        uses: actions/setup-node@v2
+        continue-on-error: true
+        with:
+          node-version: ${{ steps.node-version.outputs.version }}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Set up yarn cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install js dependencies
+        run: yarn install --check-files
+
+      - name: Run tests
+        run: yarn run test
+
+      - name: Run lint
+        uses: wearerequired/lint-action@v1
+        with:
+          eslint: true
+          eslint_dir: src/
+          eslint_extensions: js,ts,tsx,jsx
+          stylelint: true
+          stylelint_dir: src/
+          stylelint_extensions: scss
+          prettier: true
+          prettier_dir: src/
+          prettier_extensions: js,ts,jsx,tsx,md,mdx
+          prettier_args: --list-different --no-error-on-unmatched-pattern
