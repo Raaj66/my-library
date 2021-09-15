@@ -43,7 +43,7 @@ jobs:
         run: yarn run storybook:export
 
       - name: Sync S3 bucket staging
-        if: contains(github.base_ref, 'deploy')
+        if: contains(github.ref, 'deploy')
         uses: jakejarvis/s3-sync-action@master
         env:
           AWS_S3_BUCKET: react-component-library-storybook.staging.icapitalnetwork.com
@@ -53,7 +53,7 @@ jobs:
           SOURCE_DIR: ./storybook-static
 
       - name: Sync S3 bucket production
-        if: contains(github.base_ref, 'master')
+        if: contains(github.ref, 'master')
         uses: jakejarvis/s3-sync-action@master
         env:
           AWS_S3_BUCKET: react-component-library-storybook.icapitalnetwork.com
