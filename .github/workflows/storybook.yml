@@ -1,0 +1,63 @@
+on:
+  push: 
+    branches:
+      - master
+      - deploy
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    name: Build and Push Storybook
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update npmrc with authtoken
+        run: sed -i -e 's@[INPUT_YOUR_TOKEN_HERE]@${{ secrets.GITHUB_TOKEN }}@g' .npmrc
+
+      - name: Get node version
+        id: node-version
+        run: echo "::set-output name=version::$(cat .nvmrc)"
+
+      - name: Use Node.js ${{ steps.node-version.outputs.version }}
+        uses: actions/setup-node@v2
+        continue-on-error: true
+        with:
+          node-version: ${{ steps.node-version.outputs.version }}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Set up yarn cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install js dependencies
+        run: yarn install --check-files
+      
+      - name: Build storybook
+        run: yarn run storybook:export
+
+      - name: Sync S3 bucket staging
+        if: contains(github.base_ref, 'deploy')
+        uses: jakejarvis/s3-sync-action@master
+        env:
+          AWS_S3_BUCKET: react-component-library-storybook.staging.icapitalnetwork.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_STAGING }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_STAGING }}
+          AWS_REGION: us-east-1
+          SOURCE_DIR: ./storybook-static
+
+      - name: Sync S3 bucket production
+        if: contains(github.base_ref, 'master')
+        uses: jakejarvis/s3-sync-action@master
+        env:
+          AWS_S3_BUCKET: react-component-library-storybook.icapitalnetwork.com
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_PRODUCTION }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_PRODUCTION }}
+          AWS_REGION: us-east-1
+          SOURCE_DIR: ./storybook-static
