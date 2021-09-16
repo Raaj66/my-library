@@ -1,9 +1,14 @@
 {
   "extends": [
-    "stylelint-config-sass-guidelines"
+    "stylelint-config-recommended"
   ],
   "rules": {
-    "indentation": "tab",
-    "number-leading-zero": null
+    "indentation": null,
+    "number-leading-zero": null,
+    "at-rule-no-unknown": null,
+    "declaration-block-no-duplicate-properties": null,
+    "property-no-unknown": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null
   }
 }
