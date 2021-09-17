@@ -1,5 +1,5 @@
-import IcnFileSelector from './FileSelector';
+import { IcnFileSelector, IIcnFileSelectorProps } from './FileSelector';
 import IcnButton from './Button';
 import { ButtonSize, ButtonVariant, ButtonType, IIcnButtonProps } from './Button/IcnButton.types';
 
-export { IcnButton, IcnFileSelector, ButtonSize, ButtonVariant, ButtonType, IIcnButtonProps };
+export { IcnButton, IcnFileSelector, ButtonSize, ButtonVariant, ButtonType, IIcnButtonProps, IIcnFileSelectorProps };

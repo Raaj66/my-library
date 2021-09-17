@@ -1,3 +1,4 @@
 import IcnFileSelector from './IcnFileSelector';
+import { IIcnFileSelectorProps } from './IcnFileSelector.types';
 
-export default IcnFileSelector;
+export { IcnFileSelector, IIcnFileSelectorProps };

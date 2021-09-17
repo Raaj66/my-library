@@ -1,9 +1,9 @@
 /* eslint-disable react/button-has-type */
 import React, { useCallback } from 'react';
 import cx from 'classnames';
-import './IcnButton.module.scss';
 import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 import RenderIcon from './ButtonIcon';
+import styles from './IcnButton.module.scss';
 
 const IcnButton = ({
   id,
@@ -33,7 +33,10 @@ const IcnButton = ({
       id={id}
       type={type}
       onClick={onClick}
-      className={cx('icnBtn', className, styleType, size, { pull_right: !!pullRight, disabled })}
+      className={cx(styles.icnBtn, className, styles[styleType], styles[size], {
+        [styles.pull_right]: !!pullRight,
+        [styles.disabled]: disabled,
+      })}
       disabled={disabled}
     >
       <RenderIcon IconSvg={IconSvg} iconClassName={iconClassName} size={size} />

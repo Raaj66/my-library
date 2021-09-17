@@ -1,13 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import { IIconProps } from './IcnButton.types';
+import styles from './IcnButton.module.scss';
 
 const RenderIcon: React.FC<IIconProps> = ({ IconSvg, iconClassName, size }) => {
   if (IconSvg) {
-    return <IconSvg className={cx('iconSvg', 'icon', size)} />;
+    return <IconSvg className={cx(styles.iconSvg, styles.icon, styles[size])} />;
   }
   if (iconClassName) {
-    return <i className={cx(iconClassName, 'icon', size)} />;
+    return <i className={cx(iconClassName, styles.icon, styles[size])} />;
   }
   return null;
 };
