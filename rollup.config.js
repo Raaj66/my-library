@@ -1,4 +1,6 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
@@ -25,6 +27,26 @@ export default {
   ],
   acornInjectPlugins: [jsx()],
   plugins: [
+    alias({
+      /**
+       * For custom files extension you might want to add "customerResolver"
+       * https://github.com/rollup/plugins/tree/master/packages/alias#custom-resolvers
+       *
+       * By doing that this plugin can read different kind of files.
+       */
+      // resolve: ['.ts', '.tsx'],
+      // entries: resolveEntries(),
+      entries: [
+        {
+          find: 'models',
+          replacement: path.resolve(__dirname, 'src/models'),
+        },
+        {
+          find: 'helper',
+          replacement: path.resolve(__dirname, 'src/helper'),
+        },
+      ],
+    }),
     peerDepsExternal(),
     resolve(),
     commonjs(),
