@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { mount, shallow } from '../../../../enzime';
-import { IcnFileSelector, ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from '..';
+import { mount, shallow } from '../../../enzime';
+import IcnFileSelector from './IcnFileSelector';
+import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from '../Button/IcnButton.types';
 
 describe('IcnFileSelector', () => {
   const fileName = 'test.pdf';

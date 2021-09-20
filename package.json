@@ -13,8 +13,8 @@
   },
   "repository": "https://github.com/icapitalnetwork/react-component-library-poc",
   "scripts": {
-    "build": "rimraf dist && rollup -c",
-    "build:lib": "rollup -c && npm pack",
+    "build": "yarn cache clean && rimraf build && rimraf dist && rollup -c",
+    "build:lib": "yarn cache clean && rimraf build && rimraf dist && rollup -c && npm pack",
     "publish:package": "npm publish",
     "test": "jest",
     "test:watch": "jest --watch",

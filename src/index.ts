@@ -1,30 +1,15 @@
-import TestComponent from './Components/Shared/TestComponent';
-import {
-  IcnButton,
-  IcnFileSelector,
-  ButtonSize,
-  ButtonType,
-  ButtonVariant,
-  IIcnButtonProps,
-  IIcnFileSelectorProps,
-} from './Components/Shared/Buttons';
-import FieldWrap from './Components/Shared/Forms/FieldWrap/FieldWrap';
+// Buttons
+export { default as IcnButton } from './components/Buttons/Button';
+export * from './components/Buttons/Button';
 
-import useOnClickOutside from './hooks/useOnClickOutside';
+export { default as IcnFileSelector } from './components/Buttons/FileSelector';
+export * from './components/Buttons/FileSelector';
+// import TestComponent from './Components/Shared/TestComponent';
+export { default as TestComponent } from './components/TestComponent';
+export * from './components/TestComponent';
 
-import { PRIVATE_FIELD_MASK_ATTRIBUTE, ESCAPE_KEY } from './constants';
+export { default as FieldWrap } from './components/Forms';
+export * from './components/Forms';
 
-export {
-  TestComponent,
-  IcnButton,
-  ButtonSize,
-  ButtonType,
-  ButtonVariant,
-  IcnFileSelector,
-  IIcnButtonProps,
-  IIcnFileSelectorProps,
-  FieldWrap,
-  PRIVATE_FIELD_MASK_ATTRIBUTE,
-  ESCAPE_KEY,
-  useOnClickOutside,
-};
+export * from './constants';
+export { default as useOnClickOutside } from './hooks/useOnClickOutside';

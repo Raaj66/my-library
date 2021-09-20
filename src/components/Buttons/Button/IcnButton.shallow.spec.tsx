@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { IIcnButtonProps } from '..';
-import { shallow } from '../../../../enzime';
+import { shallow } from '../../../enzime';
 import IcnButton from './IcnButton';
-import { ButtonSize, ButtonType, ButtonVariant } from './IcnButton.types';
+import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 
 describe('Button shallow', () => {
   const mockProps: IIcnButtonProps = {

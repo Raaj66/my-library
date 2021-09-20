@@ -1,4 +1,3 @@
-// import { WithChildren } from '../../../../helper/types/WithChildren.types';
 import { WithChildren } from 'helper/types/WithChildren.types';
 
 export enum ButtonSize {

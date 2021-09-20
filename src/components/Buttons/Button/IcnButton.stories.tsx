@@ -4,8 +4,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import IcnButton from './IcnButton';
-import { ButtonSize, ButtonType, ButtonVariant } from './IcnButton.types';
-import { IIcnButtonProps } from '..';
+import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 
 export default {
   title: 'Components/Buttons/ICN Button',

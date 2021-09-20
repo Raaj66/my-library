@@ -38,12 +38,32 @@ export default {
       // entries: resolveEntries(),
       entries: [
         {
-          find: 'models',
-          replacement: path.resolve(__dirname, 'src/models'),
+          find: 'root',
+          replacement: path.resolve(__dirname, 'src'),
+        },
+        {
+          find: 'components',
+          replacement: path.resolve(__dirname, 'src/components'),
         },
         {
           find: 'helper',
           replacement: path.resolve(__dirname, 'src/helper'),
+        },
+        {
+          find: 'constants',
+          replacement: path.resolve(__dirname, 'src/constants'),
+        },
+        {
+          find: 'hooks',
+          replacement: path.resolve(__dirname, 'src/hooks'),
+        },
+        {
+          find: 'scss',
+          replacement: path.resolve(__dirname, 'src/scss'),
+        },
+        {
+          find: 'stories',
+          replacement: path.resolve(__dirname, 'src/stories'),
         },
       ],
     }),
