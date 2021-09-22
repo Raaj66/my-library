@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { PureComponent } from 'react';
-import { ButtonSize, ButtonType, ButtonVariant } from '../Button/IcnButton.types';
-import IcnButton from '../Button/IcnButton';
+import IcnButton, { ButtonSize, ButtonType, ButtonVariant } from 'components/Buttons/Button';
 import { Input, Label } from './IcnFileSelector.styled';
 import { IIcnFileSelectorProps } from './IcnFileSelector.types';
 
@@ -26,7 +24,7 @@ export class IcnFileSelector extends PureComponent<IIcnFileSelectorProps, IcnFil
     const { onFileSelected } = this.props;
     if (file) {
       this.setState({ fileTitle: file.name });
-      onFileSelected(file);
+      onFileSelected?.(file);
     } else {
       this.setState({ fileTitle: '' });
     }

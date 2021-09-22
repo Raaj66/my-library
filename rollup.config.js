@@ -38,7 +38,7 @@ export default {
       // entries: resolveEntries(),
       entries: [
         {
-          find: 'root',
+          find: 'src',
           replacement: path.resolve(__dirname, 'src'),
         },
         {

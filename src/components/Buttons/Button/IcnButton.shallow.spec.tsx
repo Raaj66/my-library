@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { shallow } from '../../../enzime';
+import { shallow, mount } from 'helper/enzime';
 import IcnButton from './IcnButton';
 import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 
@@ -89,7 +89,7 @@ describe('Button shallow', () => {
       ...mockProps,
       iconClassName: 'fa fa-download',
     };
-    const wrapper = shallow(<IcnButton {...props} />);
+    const wrapper = mount(<IcnButton {...props} />);
     expect(wrapper.find('button i').hasClass('xl')).toEqual(true);
     expect(wrapper.find('button i').hasClass('fa fa-download')).toEqual(true);
   });
@@ -99,7 +99,7 @@ describe('Button shallow', () => {
       ...mockProps,
       iconSvg: IconSvg,
     };
-    const wrapper = shallow(<IcnButton {...props} />);
+    const wrapper = mount(<IcnButton {...props} />);
     expect(wrapper.find('button IconSvg').exists()).toEqual(true);
     expect(wrapper.find('button IconSvg').hasClass('iconSvg')).toEqual(true);
   });

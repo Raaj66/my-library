@@ -1,0 +1,86 @@
+@import "src/scss/mixins/font";
+@import "src/scss/variables/color";
+
+.hide {
+	display: none;
+}
+
+.title {
+	@include primary-font-light;
+	font-size: 28px;
+	color: $green_primary;
+	margin-bottom: 32px;
+	margin-right: 56px;
+	flex: 0 1 auto;
+}
+
+.description {
+	@include primary-font-demibold;
+	color: $dark-desaturated-blue;
+	font-size: 14px;
+	letter-spacing: 0;
+	line-height: 18px;
+	width: auto;
+	margin-bottom: 24px;
+	margin-right: 56px;
+}
+
+.bodyText, .scrollbar {
+	@include primary-font;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.scrollbar {
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1 1 auto;
+	color: $gray-primary;
+	max-width: calc(100% - 24px);
+	padding-right: 30px;
+	&::-webkit-scrollbar-track {
+		background: $gray-primary;
+		border: 2px solid transparent;
+		background-clip: content-box;
+		width: 1px;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+		margin-left: 10000px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $gray-primary;
+		border-radius: 5px;
+		width: 5px;
+	}
+}
+
+.footer {
+	flex: 0 1 auto;
+	margin-right: 56px;
+}
+
+.horizontalRule {
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+div.footer > button {
+	margin-left: 12px;
+	min-width: 70px;
+	&.hide {
+		display: none;
+	}
+}
+
+.buttonsContainer {
+	margin-top: 24px;
+}
+
+.buttons {
+	display: block;
+	float: right;
+	min-width: 68px;
+	margin-bottom: 0;
+}

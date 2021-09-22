@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { IIconProps } from './IcnButton.types';
 import styles from './IcnButton.module.scss';
+import 'font-awesome/css/font-awesome.css';
 
 const RenderIcon: React.FC<IIconProps> = ({ IconSvg, iconClassName, size }) => {
   if (IconSvg) {

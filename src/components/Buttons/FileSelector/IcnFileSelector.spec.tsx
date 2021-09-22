@@ -1,22 +1,22 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { mount, shallow } from '../../../enzime';
+import { mount } from 'helper/enzime';
+import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from 'components/Buttons/Button';
 import IcnFileSelector from './IcnFileSelector';
-import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from '../Button/IcnButton.types';
 
 describe('IcnFileSelector', () => {
   const fileName = 'test.pdf';
   it('resets fileName to blank when no file is selected', () => {
     const componentWrapper = mount(<IcnFileSelector text="" />);
     const component = componentWrapper.instance();
-    componentWrapper.setState({ fileName });
+    componentWrapper.setState({ fileTitle: fileName });
     componentWrapper.find('input').simulate('change', { target: { files: [] } });
     expect(component.state).toEqual({ fileTitle: '' });
   });
   it('resets fileName to blank', () => {
-    const componentWrapper = shallow(<IcnFileSelector text="" />);
+    const componentWrapper = mount(<IcnFileSelector text="" />);
     const component = componentWrapper.instance() as IcnFileSelector;
-    componentWrapper.setState({ fileName });
+    componentWrapper.setState({ fileTitle: fileName });
     component.reset();
     expect(component.state).toEqual({ fileTitle: '' });
   });
@@ -56,7 +56,7 @@ describe('IcnFileSelector', () => {
       size: ButtonSize.Large,
       disabled: false,
     };
-    const componentWrapper = shallow(<IcnFileSelector {...defaultProps} />);
+    const componentWrapper = mount(<IcnFileSelector {...defaultProps} />);
     const buttonProps = componentWrapper.find('IcnButton').props() as any;
     delete buttonProps.callback;
     expect(buttonProps).toEqual(defaultProps);

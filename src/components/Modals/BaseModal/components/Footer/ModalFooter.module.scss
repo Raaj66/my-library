@@ -1,0 +1,32 @@
+.footer {
+	flex: 1 1 auto;
+	margin-right: 56px;
+
+	.buttonsContainer {
+		margin-top: 24px;
+	}
+
+	.buttons {
+		display: block;
+		float: right;
+		min-width: 68px;
+	}
+
+	& > button {
+		margin-left: 12px;
+		min-width: 70px;
+		&.hide {
+			display: none;
+		}
+	}
+
+	.buttonsContainer {
+		margin-top: 24px;
+	}
+
+	.horizontalRule {
+		margin-top: 32px;
+		margin-bottom: 24px;
+	}
+}
+

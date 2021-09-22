@@ -1,3 +1,44 @@
 {
-    "presets": ["@babel/env", "@babel/preset-react"]
+  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "babel-plugin-root-import",
+      {
+        "paths": [
+          {
+            "rootPathPrefix": "~",
+            "rootPathSuffix": "./"
+          },
+          {
+            "rootPathPrefix": "@src",
+            "rootPathSuffix": "/src"
+          },
+          {
+            "rootPathPrefix": "@Shared",
+            "rootPathSuffix": "/src/Components/Shared"
+          },
+          {
+            "rootPathPrefix": "@Components",
+            "rootPathSuffix": "/src/Components"
+          },
+          {
+            "rootPathPrefix": "@Hooks",
+            "rootPathSuffix": "/src/hooks"
+          },
+          {
+            "rootPathPrefix": "@Helpers",
+            "rootPathSuffix": "/src/helper"
+          },
+          {
+            "rootPathPrefix": "@Constants",
+            "rootPathSuffix": "/src/constants"
+          },
+          {
+            "rootPathPrefix": "@sass",
+            "rootPathSuffix": "/src/scss"
+          }
+        ]
+      }
+    ]
+  ]
 }

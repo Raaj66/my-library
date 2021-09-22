@@ -4,6 +4,7 @@ import cx from 'classnames';
 import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 import RenderIcon from './ButtonIcon';
 import styles from './IcnButton.module.scss';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const IcnButton = ({
   id,

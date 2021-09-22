@@ -1,0 +1,41 @@
+@import 'src/scss/mixins/font';
+@import 'src/scss/variables/color';
+
+.subhead {
+  font-size: 14px;
+  font-family: $primary-font-demibold;
+  color: $dark-desaturated-blue;
+  margin-bottom: 12px;
+}
+
+.bodyText,
+.scrollbar {
+  @include primary-font;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.scrollbar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  color: $gray-primary;
+  max-width: calc(100% - 24px);
+  padding-right: 30px;
+  &::-webkit-scrollbar-track {
+    background: $gray-primary;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    width: 1px;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 10000px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-primary;
+    border-radius: 5px;
+    width: 5px;
+  }
+}

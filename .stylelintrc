@@ -9,6 +9,7 @@
     "declaration-block-no-duplicate-properties": null,
     "property-no-unknown": null,
     "font-family-no-missing-generic-family-keyword": null,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null
   }
 }

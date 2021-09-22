@@ -1,0 +1,11 @@
+@import "src/scss/mixins/font";
+
+.fileSelectorInput {
+  display: none !important;
+}
+
+.fileTitle {
+  margin-left: 15px;
+  margin-top: 15px;
+  @include primary-font-demibold;
+}

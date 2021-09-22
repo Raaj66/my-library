@@ -1,0 +1,22 @@
+@import "src/scss/mixins/font";
+@import "src/scss/variables/color";
+
+.title {
+	@include primary-font-light;
+	font-size: 28px;
+	color: $green_primary;
+	margin-bottom: 32px;
+	margin-right: 56px;
+	flex: 0 1 auto;
+}
+
+.description {
+	@include primary-font-demibold;
+	color: $dark-desaturated-blue;
+	font-size: 14px;
+	letter-spacing: 0;
+	line-height: 18px;
+	width: auto;
+	margin-bottom: 24px;
+	margin-right: 56px;
+}

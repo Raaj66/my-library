@@ -41,6 +41,7 @@ module.exports = {
         presets: [['react-app', { flow: false, typescript: true }]],
       },
     });
+    config.resolve.alias['src'] = path.resolve(__dirname, '../src');
     config.resolve.alias['components'] = path.resolve(__dirname, '../src/components');
     config.resolve.alias['stories'] = path.resolve(__dirname, '../src/stories');
     config.resolve.alias['constants'] = path.resolve(__dirname, '../src/constants');
