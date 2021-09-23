@@ -24,7 +24,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "allowJs": true
   },
   "include": ["src/**/*", "declarations.d.ts"],
   "exclude": [
