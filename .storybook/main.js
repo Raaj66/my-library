@@ -1,8 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)', '../src/**/*.stories.mdx'],
-  // Add any Storybook addons you want here: https://storybook.js.org/addons/
+  stories: ['../src/stories/Welcome.stories.mdx','../src/**/*.stories.@(js|jsx|ts|tsx)', '../src/**/*.stories.mdx'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -11,27 +10,34 @@ module.exports = {
     '@storybook/addon-postcss',
   ],
   webpackFinal: async (config) => {
-    // config.module.rules.push({
-    //   test: /\.scss$/,
-    //   use: ['style-loader', 'css-loader', 'sass-loader'],
-    //   include: path.resolve(__dirname, '../'),
-    // });
-
     config.module.rules.push({
-      test: /\.scss$/,
+      test: /\.module\.scss/,
       use: [
-        'style-loader',
+        require.resolve('style-loader'),
         {
-          loader: 'css-loader',
+          loader: require.resolve('css-loader'),
           options: {
             modules: {
-              localIdentName: '[local]-[hash:base64:5]',
+              localIdentName: '[name]__[local]__[hash:base64:5]',
             },
           },
         },
         'sass-loader',
       ],
       include: path.resolve(__dirname, '../'),
+    });
+    config.module.rules.push({
+      test: /^((?!\.module).)*\.scss/,
+      use: [
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader'),
+          options: {
+            importLoaders: 1,
+          },
+        },
+        'sass-loader'
+      ],
     });
 
     config.module.rules.push({
@@ -41,7 +47,6 @@ module.exports = {
         presets: [['react-app', { flow: false, typescript: true }]],
       },
     });
-    config.resolve.alias['src'] = path.resolve(__dirname, '../src');
     config.resolve.alias['components'] = path.resolve(__dirname, '../src/components');
     config.resolve.alias['stories'] = path.resolve(__dirname, '../src/stories');
     config.resolve.alias['constants'] = path.resolve(__dirname, '../src/constants');
@@ -56,6 +61,21 @@ module.exports = {
     config.resolve.alias['@hooks'] = path.resolve(__dirname, '../src/hooks');
     config.resolve.alias['@scss'] = path.resolve(__dirname, '../src/scss');
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx');
+
+    config.module.rules.push({
+      test: /\.(png|woff|woff2|eot|tf|svg)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          query: {
+            name: '[name].[ext]'
+          }
+        }
+      ],
+      include: path.resolve(__dirname, '../public')
+    });
+
+
 
     return config;
   },
