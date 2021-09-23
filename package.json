@@ -11,7 +11,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "repository": "https://github.com/icapitalnetwork/react-component-library-poc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icapitalnetwork/react-component-library.git"
+  },
   "scripts": {
     "build": "yarn cache clean && rimraf build && rimraf dist && rollup -c",
     "build:lib": "yarn cache clean && rimraf build && rimraf dist && rollup -c && npm pack",

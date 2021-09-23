@@ -11,9 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Update npmrc with authtoken
-        run: sed -i -e 's@[INPUT_YOUR_TOKEN_HERE]@${{ secrets.GITHUB_TOKEN }}@g' .npmrc
-
       - name: Get node version
         id: node-version
         run: echo "::set-output name=version::$(cat .nvmrc)"
