@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { mount } from 'helper/enzime';
-import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from 'components/Buttons/Button';
+import { mount } from '@helper/enzime';
+import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from '@components/Buttons/Button';
 import IcnFileSelector from './IcnFileSelector';
 
 describe('IcnFileSelector', () => {

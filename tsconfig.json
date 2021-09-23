@@ -3,13 +3,19 @@
     "baseUrl": "src",
     "paths": {
       "src": ["./src"],
-      // Your custom aliases here
       "helper/*": ["helper/*"],
       "scss/*": ["scss/*"],
       "components/*": ["components/*"],
       "hooks/*": ["hooks/*"],
       "constants/*": ["constants/*"],
-      "stories/*": ["stories/*"]
+      "stories/*": ["stories/*"],
+      "@src": ["./src"],
+      "@helper/*": ["helper/*"],
+      "@scss/*": ["scss/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@constants/*": ["constants/*"],
+      "@stories/*": ["stories/*"]
     },
 
     "rootDir": "src",

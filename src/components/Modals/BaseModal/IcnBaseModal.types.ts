@@ -1,5 +1,5 @@
-import { WithChildren } from 'helper/types/WithChildren.types';
-import { ModalSize, ModalType } from 'components/Modals/IcnModal.types';
+import { WithChildren } from '@helper/types/WithChildren.types';
+import { ModalSize, ModalType } from '@components/Modals/IcnModal.types';
 
 export interface BaseModalProps extends WithChildren {
   title: string;

@@ -1,6 +1,6 @@
 import React from 'react';
-import IcnButton, { ButtonSize, ButtonVariant } from 'components/Buttons/Button';
-import { mount } from 'helper/enzime';
+import IcnButton, { ButtonSize, ButtonVariant } from '@components/Buttons/Button';
+import { mount } from '@helper/enzime';
 import IcnBaseModal from './BaseModal/IcnBaseModal';
 import IcnWarningModal from './WarningModal/IcnWarningModal';
 import IcnActionModal from './ActionModal/IcnActionModal';

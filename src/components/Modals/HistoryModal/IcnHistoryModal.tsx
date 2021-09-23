@@ -1,6 +1,6 @@
 import React from 'react';
-import IcnBaseModal from 'components/Modals/BaseModal';
-import { ModalType } from 'components/Modals/IcnModal.types';
+import IcnBaseModal from '@components/Modals/BaseModal';
+import { ModalType } from '@components/Modals/IcnModal.types';
 import { IIcnHistoryModalProps } from './IcnHistoryModal.types';
 
 const IcnHistoryModal = ({

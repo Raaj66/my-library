@@ -1,7 +1,7 @@
 import React from 'react';
 import { isNil } from 'lodash';
-import IcnButton, { ButtonSize, ButtonVariant } from 'components/Buttons/Button';
-import { ModalType } from 'components/Modals/IcnModal.types';
+import IcnButton, { ButtonSize, ButtonVariant } from '@components/Buttons/Button';
+import { ModalType } from '@components/Modals/IcnModal.types';
 import { ModalFooterProps } from './ModalFooter.types';
 import styles from './ModalFooter.module.scss';
 

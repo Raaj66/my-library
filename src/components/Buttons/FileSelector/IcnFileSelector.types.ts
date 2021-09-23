@@ -1,4 +1,4 @@
-import { IIcnButtonProps } from 'components/Buttons/Button/IcnButton.types';
+import { IIcnButtonProps } from '@components/Buttons/Button/IcnButton.types';
 
 export interface IIcnFileSelectorProps extends IIcnButtonProps {
   onFileSelected?: (file: File) => void;

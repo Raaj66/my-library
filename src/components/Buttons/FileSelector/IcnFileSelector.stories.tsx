@@ -3,8 +3,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-import { ButtonSize } from 'components/Buttons/Button/IcnButton.types';
-import FieldDecorator from 'stories/lib/FieldDecorator';
+import { ButtonSize } from '@components/Buttons/Button/IcnButton.types';
+import FieldDecorator from '@stories/lib/FieldDecorator';
 import { IcnFileSelector } from './IcnFileSelector';
 
 storiesOf('Components/Buttons/ICN File Selector', module)

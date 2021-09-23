@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import IcnButton, { ButtonSize, ButtonType, ButtonVariant } from 'components/Buttons/Button';
+import IcnButton, { ButtonSize, ButtonType, ButtonVariant } from '@components/Buttons/Button';
 import { Input, Label } from './IcnFileSelector.styled';
 import { IIcnFileSelectorProps } from './IcnFileSelector.types';
 

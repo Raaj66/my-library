@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { shallow, mount } from 'helper/enzime';
+import { shallow, mount } from '@helper/enzime';
 import IcnButton from './IcnButton';
 import { ButtonSize, ButtonType, ButtonVariant, IIcnButtonProps } from './IcnButton.types';
 

@@ -25,11 +25,11 @@ module.exports = {
           loader: 'css-loader',
           options: {
             modules: {
-              localIdentName: '[local]-[hash:base64:5]'
+              localIdentName: '[local]-[hash:base64:5]',
             },
           },
         },
-        'sass-loader'
+        'sass-loader',
       ],
       include: path.resolve(__dirname, '../'),
     });
@@ -48,6 +48,13 @@ module.exports = {
     config.resolve.alias['helper'] = path.resolve(__dirname, '../src/helper');
     config.resolve.alias['hooks'] = path.resolve(__dirname, '../src/hooks');
     config.resolve.alias['scss'] = path.resolve(__dirname, '../src/scss');
+    config.resolve.alias['@src'] = path.resolve(__dirname, '../src');
+    config.resolve.alias['@components'] = path.resolve(__dirname, '../src/components');
+    config.resolve.alias['@stories'] = path.resolve(__dirname, '../src/stories');
+    config.resolve.alias['@constants'] = path.resolve(__dirname, '../src/constants');
+    config.resolve.alias['@helper'] = path.resolve(__dirname, '../src/helper');
+    config.resolve.alias['@hooks'] = path.resolve(__dirname, '../src/hooks');
+    config.resolve.alias['@scss'] = path.resolve(__dirname, '../src/scss');
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx');
 
     return config;

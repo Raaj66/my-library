@@ -9,6 +9,7 @@ import copy from 'rollup-plugin-copy';
 import jsx from 'acorn-jsx';
 import babel from '@rollup/plugin-babel';
 import del from 'rollup-plugin-delete';
+import autoprefixer from 'autoprefixer';
 import pkg from './package.json';
 
 export default {
@@ -25,6 +26,7 @@ export default {
       sourcemap: true,
     },
   ],
+  preserveModules: true,
   acornInjectPlugins: [jsx()],
   plugins: [
     alias({
@@ -65,14 +67,43 @@ export default {
           find: 'stories',
           replacement: path.resolve(__dirname, 'src/stories'),
         },
+        {
+          find: '@src',
+          replacement: path.resolve(__dirname, 'src'),
+        },
+        {
+          find: '@components',
+          replacement: path.resolve(__dirname, 'src/components'),
+        },
+        {
+          find: '@helper',
+          replacement: path.resolve(__dirname, 'src/helper'),
+        },
+        {
+          find: '@constants',
+          replacement: path.resolve(__dirname, 'src/constants'),
+        },
+        {
+          find: '@hooks',
+          replacement: path.resolve(__dirname, 'src/hooks'),
+        },
+        {
+          find: '@scss',
+          replacement: path.resolve(__dirname, 'src/scss'),
+        },
+        {
+          find: '@stories',
+          replacement: path.resolve(__dirname, 'src/stories'),
+        },
       ],
     }),
     peerDepsExternal(),
+    postcss(),
     resolve(),
-    commonjs(),
+    autoprefixer(),
     // typescript({ useTsconfigDeclarationDir: true }),
     typescript({ lib: ['es5', 'es6', 'dom'], target: 'es6', jsx: 'preserve' }),
-    postcss(),
+    commonjs(),
     babel({
       exclude: 'node_modules/**',
       babelHelpers: 'bundled',

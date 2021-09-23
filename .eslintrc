@@ -11,7 +11,8 @@
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:test-selectors/recommendedWithErrors"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,7 +22,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "jest"],
+  "plugins": ["react", "@typescript-eslint", "jest", "test-selectors"],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
@@ -44,6 +45,7 @@
     "no-use-before-define": "off",
     "no-console": "off",
     "import/default": "off",
+    "@typescript-eslint/no-empty-function": "off",
     "import/extensions": [
       "error",
       "always",
@@ -62,7 +64,14 @@
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    "jest/valid-expect": "error",
+    "test-selectors/onChange": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/anchor": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/button": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/input": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/onClick": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/onKeyDown": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }],
+    "test-selectors/onKeyUp": ["warn", "always", { "ignoreDisabled": false, "ignoreReadonly": false }]
   },
   "settings": {
     "jest": {
@@ -73,6 +82,24 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
+      "alias": {
+        "map": [
+          ["src", "./src"],
+          ["components", "./src/components"],
+          ["constants", "./src/constants"],
+          ["helper", "./src/helper"],
+          ["hooks", "./src/hooks"],
+          ["scss", "./src/scss"],
+          ["stories", "./src/stories"],
+          ["@src", "./src"],
+          ["@components", "./src/components"],
+          ["@constants", "./src/constants"],
+          ["@helper", "./src/helper"],
+          ["@hooks", "./src/hooks"],
+          ["@scss", "./src/scss"],
+          ["@stories", "./src/stories"]
+        ]
+      },
       "typescript": "./tsconfig.json",
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
