@@ -27,6 +27,11 @@ export default {
   ],
   acornInjectPlugins: [jsx()],
   plugins: [
+    postcss({
+      extract: false,
+      modules: true,
+      use: ['sass'],
+    }),
     alias({
       /**
        * For custom files extension you might want to add "customerResolver"
@@ -96,7 +101,6 @@ export default {
       ],
     }),
     peerDepsExternal(),
-    postcss(),
     resolve(),
     // typescript({ useTsconfigDeclarationDir: true }),
     typescript({ lib: ['es5', 'es6', 'dom'], target: 'es6', jsx: 'preserve' }),
