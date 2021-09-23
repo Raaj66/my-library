@@ -9,7 +9,6 @@ import copy from 'rollup-plugin-copy';
 import jsx from 'acorn-jsx';
 import babel from '@rollup/plugin-babel';
 import del from 'rollup-plugin-delete';
-import autoprefixer from 'autoprefixer';
 import pkg from './package.json';
 
 export default {
@@ -26,7 +25,6 @@ export default {
       sourcemap: true,
     },
   ],
-  preserveModules: true,
   acornInjectPlugins: [jsx()],
   plugins: [
     alias({
@@ -100,7 +98,6 @@ export default {
     peerDepsExternal(),
     postcss(),
     resolve(),
-    autoprefixer(),
     // typescript({ useTsconfigDeclarationDir: true }),
     typescript({ lib: ['es5', 'es6', 'dom'], target: 'es6', jsx: 'preserve' }),
     commonjs(),

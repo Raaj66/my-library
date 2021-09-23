@@ -124,3 +124,4 @@ dist
 .DS_Store
 package/LICENSE
 package-lock.json
+.idea
