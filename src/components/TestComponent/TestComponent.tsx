@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { TestComponentProps } from './TestComponent.types';
 
-import styles from './TestComponent.scss';
+import styles from './TestComponent.module.scss';
 
 const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
   <div data-testid="test-component" className={cx(styles[`test-component-${theme}`], styles['test-component'])}>
