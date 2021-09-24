@@ -1,0 +1,57 @@
+@import "src/scss/variables/color";
+@import "src/scss/mixins/font";
+
+.container {
+  @include primary-font-demibold;
+  font-size: 11px;
+  display: flex;
+  height: 24px;
+  button {
+    color: $link-blue;
+    outline: transparent;
+    background-color: $white;
+    cursor: pointer;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    button {
+      cursor: not-allowed;
+      color: $brand-gray-lite;
+      border-color: $brand-gray-lite;
+      &.active {
+        background-color: $brand-gray-lite;
+        color: $white;
+      }
+    }
+  }
+}
+
+.fixed_container {
+  width: 220px;
+}
+
+.flex_container {
+  width: 100%;
+}
+
+.toggle_left, .toggle_right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gray-2;
+}
+
+.toggle_left {
+  border-radius: 12px 0 0 12px;
+}
+
+.toggle_right {
+  border-radius: 0 12px 12px 0;
+}
+
+button.active {
+  border-color: $brand-blue;
+  background-color: $brand-blue;
+  color: $white;
+}

@@ -4,6 +4,9 @@ export * from './components/Buttons/Button';
 export { default as IcnFileSelector } from './components/Buttons/FileSelector';
 export * from './components/Buttons/FileSelector';
 
+// Toggles
+export { default as IcnToggleButton } from './components/IcnToggleButton/IcnToggleButton';
+
 // Forms
 export { default as FieldWrap } from './components/Forms';
 export * from './components/Forms';

@@ -124,4 +124,6 @@ dist
 .DS_Store
 package/LICENSE
 package-lock.json
+
+# idea IDE auto created file
 .idea
