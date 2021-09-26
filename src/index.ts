@@ -31,5 +31,3 @@ export { default as useOnClickOutside } from './hooks/useOnClickOutside';
 export { default as TestComponent } from './components/TestComponent';
 export * from './components/TestComponent';
 
-
-export { default as CustomFont } from './components/CustomFonts';

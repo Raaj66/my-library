@@ -12,6 +12,13 @@ const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
       <h6>Version 2.0.4</h6>
       <h5>iCapital Network 2021</h5>
     </div>
+<br />
+<br />
+    <div>
+      <h1>Custom Fonts</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod assumenda, consequuntur quisquam aperiam, ullam laboriosam temporibus expedita nemo perferendis ratione tenetur itaque optio, quae fugiat ipsam architecto. Dolorum quod consequatur libero enim! Et ipsum eaque molestiae. Dicta, fuga!
+         Tenetur voluptatibus repellendus quo, rem velit labore repellat debitis a commodi!</p>
+    </div>
   </div>
 );
 
