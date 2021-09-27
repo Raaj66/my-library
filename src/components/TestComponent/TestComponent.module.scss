@@ -1,5 +1,6 @@
 @import 'src/variables.scss';
 @import 'src/typography.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .test-component {
   background-color: $harvey-white;
@@ -21,18 +22,20 @@
     color: $harvey-white;
   }
 }
+
+// Custom Fonts
 @font-face {
   font-family: 'Gotham Rounded normal';
-  src: url('../fonts/goutham//GothamRounded-LightItalic.woff2') format('woff2'),
-    url('../fonts/goutham/GothamRounded-LightItalic.woff') format('woff');
+  src: url('./fonts/goutham/GothamRounded-LightItalic.woff2') format('woff2'),
+    url('./fonts/goutham/GothamRounded-LightItalic.woff') format('woff');
   font-weight: 800;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gotham Rounded Bold';
-  src: url('../fonts/goutham/GothamRounded-Bold.woff2') format('woff2'),
-    url('../fonts/goutham/GothamRounded-Bold.woff') format('woff');
+  src: url('./fonts/goutham/GothamRounded-Bold.woff2') format('woff2'),
+    url('./fonts/goutham/GothamRounded-Bold.woff') format('woff');
   font-weight: 800;
   font-style: italic;
   font-display: swap;
