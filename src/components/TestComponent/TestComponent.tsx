@@ -3,12 +3,6 @@ import cx from 'classnames';
 import { TestComponentProps } from './TestComponent.types';
 
 import styles from './TestComponent.module.scss';
-import imageFile from './img/callDataNode.png';
-
-const image = {
-  src: imageFile,
-  alt: 'my image',
-};
 
 const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
   <div data-testid="test-component" className={cx(styles[`test-component-${theme}`], styles['test-component'])}>
@@ -34,11 +28,11 @@ const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
       <br />
       <h1>Custom Fonts</h1>
       <div style={{ fontSize: 22 }}>
-        <i class="fas fa-home"></i> <span>Home</span>
+        <i className="fas fa-home" /> <span>Home</span>
       </div>
 
       <div style={{ fontSize: 22 }}>
-        <i class="fas fa-rocket"></i> <span>Explore</span>
+        <i className="fas fa-rocket" /> <span>Explore</span>
       </div>
     </div>
 
@@ -46,7 +40,7 @@ const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
       <br />
       <h1>Custom Image</h1>
       <div style={{ fontSize: 22 }}>
-        <img src={image.src} alt={image.alt} />;
+        <img src="/img/callDataNode.png" alt="" />
       </div>
     </div>
   </div>
